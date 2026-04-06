@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.5cm,landscape]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{xcolor}
+
+\definecolor{accent}{RGB}{41, 98, 168}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\pagestyle{empty}
+
+% Header
+{\color{accent}\rule{\linewidth}{2pt}}
+\vspace{0.2em}
+
+{\LARGE\bfseries Superstore Sales Analysis}
+\hfill
+{\small\color{accent} github.com/chadliaw/superstore-analysis}
+
+\smallskip
+{\itshape Does aggressive discounting explain the Central region's profit gap?
+A statistical test across 45 US states.}
+
+\vspace{0.4em}
+{\color{accent}\rule{\linewidth}{0.5pt}}
+\vspace{0.6em}
+
+% Body
+\begin{tabular}[t]{@{}p{0.35\textwidth}@{\hspace{0.03\textwidth}}p{0.59\textwidth}@{}}
+\raisebox{-\height}{\includegraphics[width=0.35\textwidth]{chart5_state_discount_vs_margin_b.png}}
+&
+\begin{minipage}[t]{0.59\textwidth}
+  {\color{accent}\bfseries KEY STATS}
+
+  \vspace{0.4em}
+  {\fontsize{15}{15}\selectfont\bfseries r = \textminus0.905}\\[3pt]
+  {\small Pearson correlation across 45 states, p $<$ 0.0001}
+
+  \vspace{0.6em}
+  {\fontsize{15}{15}\selectfont\bfseries \$15{,}294 loss}\\[3pt]
+  {\small 7 sub-categories losing money in Central}
+
+  \vspace{0.6em}
+  {\large\bfseries 7.92\% vs 14.94\%}\\[3pt]
+  {\small Central vs West profit margin}
+
+  \vspace{0.4em}
+  {\color{accent}\rule{\linewidth}{0.3pt}}
+  \vspace{0.4em}
+
+  {\color{accent}\bfseries FINDING}
+
+  \vspace{0.3em}
+  {\small High discount rate is a statistically validated driver of
+  margin erosion across all regions --- not a Central quirk.
+  Product mix was tested and ruled out as a confounding variable.}
+
+  \vspace{0.6em}
+  {\color{accent}\bfseries TWO ROOT CAUSES}
+
+  \vspace{0.3em}
+  {\small \textbf{Group A} (Central-specific): Appliances, Furnishings,
+  Binders --- other regions sell these profitably at $<$10\% discount.}
+
+  \vspace{0.3em}
+  {\small \textbf{Group B} (Company-wide): Tables, Machines, Bookcases
+  --- all regions discount at similar levels, pointing to a cost
+  structure issue.}
+\end{minipage}
+\end{tabular}
+
+\vspace{0.6em}
+{\color{accent}\rule{\linewidth}{0.5pt}}
+\vspace{0.2em}
+
+{\small SQL (SQLite3) $\cdot$ Python (Pandas, Matplotlib, Seaborn, SciPy)
+$\cdot$ \LaTeX{}
+\hfill \texttt{github.com/chadliaw/superstore-analysis}}
+
+\end{document}
