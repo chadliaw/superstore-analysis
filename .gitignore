@@ -1,0 +1,15 @@
+# LaTeX temp files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Raw data archive (not needed — superstore.csv is included)
+data/archive.zip
